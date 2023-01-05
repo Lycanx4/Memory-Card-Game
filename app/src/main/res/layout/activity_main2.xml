@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/mode_of_game"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="VS MODE"
+            android:background="#3EB489"
+            android:gravity="center"
+            android:textColor="#FFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            />
+
+        <Chronometer
+            android:id="@+id/playtime"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            tools:ignore="SpUsage"
+            android:textColor="#FFF"
+            android:background="#3EB489"
+
+
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:text="TIME : "
+            android:textAllCaps="true"
+
+            android:drawableLeft="@drawable/ic_baseline_timer_24"
+            >
+        </Chronometer>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_ply1"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="PLAYER 1 : 0"
+            android:textAllCaps="true"
+
+            android:textColor="#6a0dad"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></TextView>
+
+        <TextView
+            android:id="@+id/tv_ply2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:text="PLAYER 2 : 0"
+            android:textColor="#6a0dad"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></TextView>
+
+
+    </LinearLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.5"
+        android:id="@+id/gridView"
+        android:numColumns="3"
+        android:stretchMode="columnWidth">
+    </GridView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_StartGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_btn"
+            android:padding="12dp"
+            android:text="Start Game"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_ChangeMode"
+            android:padding="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/round_btn"
+            android:visibility="visible"
+            android:textSize="18dp"
+            android:text="game mode" />
+
+    </LinearLayout>
+
+</LinearLayout>
